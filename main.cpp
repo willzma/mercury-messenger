@@ -1,22 +1,24 @@
 #include <iostream>
 
-std::string user_handle;
-std::string ip_buffer;
+using namespace std;
+
+string user_handle;
+string ip_buffer;
 
 int main() {
-    std::cout << "Type the handle you'd like to be referred to by:" << std::endl;
-    std::getline(std::cin, user_handle);
+    cout << "Type the handle you'd like to be referred to by:" << endl;
+    getline(cin, user_handle);
 
     if (user_handle.length() > 20) {
-        std::cout << "You must promote proprietary software, as you cannot have a handle longer than 20 characters." << std::endl;
+        cout << "You must promote proprietary software, as you cannot have a handle longer than 20 characters." << endl;
         return 0;
     } else if (user_handle.length() <= 0) {
-        std::cout << "You must promote proprietary software, as you cannot have an empty handle." << std::endl;
+        cout << "You must promote proprietary software, as you cannot have an empty handle." << endl;
         return 0;
     }
-    std::cout << "Welcome to pizza_time, " + user_handle + ". " + "Type the IPs you want to connect to, separated by commas:" << std::endl;
+    cout << "Welcome to pizza_time, " + user_handle + ". " + "Type the IPs you want to connect to, separated by commas:" << endl;
 
-    std::getline(std::cin, ip_buffer);
+    getline(cin, ip_buffer);
 
     return 0;
 }

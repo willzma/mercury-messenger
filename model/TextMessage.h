@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Session.h"
 
+using namespace std;
+
 #ifndef PIZZA_TIME_TEXTMESSAGE_H
 #define PIZZA_TIME_TEXTMESSAGE_H
 
@@ -11,18 +13,18 @@
  */
 class TextMessage {
     private:
-        std::string handle;
-        std::string message_contents;
+        string handle;
+        string message_contents;
 
     public:
-        TextMessage(std::string new_handle, std::string new_message_contents);
-        std::string getHandle() const;
+        TextMessage(string new_handle, string new_message_contents);
+        string getHandle() const;
         void setHandle();
-        std::string getMessageContents() const;
+        string getMessageContents() const;
         void setMessageContents();
         Session getSession() const;
         void setSession();
-        std::string toString() const;
+        string toString() const;
 };
 
 #endif //PIZZA_TIME_TEXTMESSAGE_H
