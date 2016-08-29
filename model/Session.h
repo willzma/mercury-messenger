@@ -6,9 +6,11 @@
 #define PIZZA_TIME_SESSION_H
 
 
-class Session {
+namespace model {
+    class Session {
 
-};
+    };
+}
 
 
 #endif //PIZZA_TIME_SESSION_H
