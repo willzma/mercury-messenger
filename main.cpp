@@ -1,9 +1,14 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
 string user_handle;
 string ip_buffer;
+
+enum RunMode {
+    CONSOLE_MODE, GRAPHICAL_MODE
+}; RunMode run_mode;
 
 int main() {
     cout << "Type the handle you'd like to be referred to by:" << endl;
@@ -19,6 +24,13 @@ int main() {
     cout << "Welcome to pizza_time, " + user_handle + ". " + "Type the IPs you want to connect to, separated by commas:" << endl;
 
     getline(cin, ip_buffer);
+
+    std::ifstream config_file("config.txt");
+    if (config_file.good()) {
+        
+    } else {
+
+    }
 
     return 0;
 }
