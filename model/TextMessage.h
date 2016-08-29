@@ -8,8 +8,6 @@ using namespace std;
 
 /**
  * The TextMessage will be used for standard messages as sent by chat participants; i.e. users
- * <p>
- * this class is functionally equivalent to a Java interface, by way of virtual methods
  */
 namespace model {
     class TextMessage {
