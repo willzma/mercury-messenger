@@ -25,11 +25,15 @@ int main() {
 
     getline(cin, ip_buffer);
 
-    std::ifstream config_file("config.txt");
+    ifstream config_file("config.txt");
     if (config_file.good()) {
-        
+        string current_line;
+        while (getline(config_file, current_line)) {
+            cout << "gay" << endl;
+        }
     } else {
-
+        ofstream new_config_file("config.txt");
+        new_config_file << "" << endl;
     }
 
     return 0;
