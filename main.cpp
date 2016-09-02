@@ -11,6 +11,17 @@ enum RunMode {
 }; RunMode run_mode;
 
 int main() {
+    ifstream config_file("config.txt");
+    if (config_file.is_open()) {
+        string current_line;
+        while (getline(config_file, current_line)) {
+            cout << "gay" << endl;
+        }
+    } else {
+        ofstream new_config_file("config.txt");
+        new_config_file << "" << endl;
+    }
+
     cout << "Type the handle you'd like to be referred to by:" << endl;
     getline(cin, user_handle);
 
@@ -24,17 +35,6 @@ int main() {
     cout << "Welcome to pizza_time, " + user_handle + ". " + "Type the IPs you want to connect to, separated by commas:" << endl;
 
     getline(cin, ip_buffer);
-
-    ifstream config_file("config.txt");
-    if (config_file.good()) {
-        string current_line;
-        while (getline(config_file, current_line)) {
-            cout << "gay" << endl;
-        }
-    } else {
-        ofstream new_config_file("config.txt");
-        new_config_file << "" << endl;
-    }
 
     return 0;
 }
