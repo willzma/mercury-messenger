@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Session.h"
+#include "session.h"
 
 using namespace std;
 
@@ -10,14 +10,14 @@ using namespace std;
  * The TextMessage will be used for standard messages as sent by chat participants; i.e. users
  */
 namespace model {
-    class TextMessage {
+    class text_message {
     private:
         string handle;
         string message_contents;
-        Session session;
+        session message_session;
 
     public:
-        TextMessage(string new_handle, string new_message_contents, Session new_session);
+        text_message(string new_handle, string new_message_contents, session new_session);
 
         string getHandle() const;
 
@@ -27,9 +27,9 @@ namespace model {
 
         void setMessageContents(string new_message_contents);
 
-        Session getSession() const;
+        session getSession() const;
 
-        void setSession(Session new_session);
+        void setSession(session new_session);
 
         string toString() const;
     };

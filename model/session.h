@@ -7,7 +7,7 @@
 
 
 namespace model {
-    class Session {
+    class session {
 
     };
 }

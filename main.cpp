@@ -15,11 +15,12 @@ int main() {
     if (config_file.is_open()) {
         string current_line;
         while (getline(config_file, current_line)) {
-            cout << "gay" << endl;
+            cout << current_line << endl;
+
         }
     } else {
         ofstream new_config_file("config.txt");
-        new_config_file << "" << endl;
+        new_config_file << "run_mode CONSOLE" << endl;
     }
 
     cout << "Type the handle you'd like to be referred to by:" << endl;
