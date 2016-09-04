@@ -33,7 +33,7 @@ int main() {
         cout << "You must promote proprietary software, as you cannot have an empty handle." << endl;
         return 0;
     }
-    cout << "Welcome to pizza_time, " + user_handle + ". " + "Type the IPs you want to connect to, separated by commas:" << endl;
+    cout << "Welcome to mercury-messenger, " + user_handle + ". " + "Type the IPs you want to connect to, separated by commas:" << endl;
 
     getline(cin, ip_buffer);
 
